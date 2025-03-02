@@ -5,11 +5,12 @@ from improve_NSGA import improve_NSGA
 if __name__ == '__main__':
     nodominated = []
     improved = []
-    for i in range(30):
-        nsga = NSGA()
-        best_pop1, first_pop1 = nsga.evolve()
+    for i in range(1):
         improve = improve_NSGA()
         best_pop2, first_pop2 = improve.evolve()
+        nsga = NSGA()
+        best_pop1, first_pop1 = nsga.evolve()
+
         nodominated.extend(best_pop1)
         improved.extend(best_pop2)
 
